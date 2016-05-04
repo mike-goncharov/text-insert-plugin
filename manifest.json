@@ -1,0 +1,62 @@
+{
+  "name": "AGM dev tweaks",
+  "description": "Some useful tweaks for AGM-designers and developers.",
+  "version": "1.0",
+  "icons": {
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_security_policy": "default-src 'self'",
+  "background": {
+    "scripts": [ "js/confluence-links-highlight.js" ]
+  },
+  "content_scripts": [
+    {
+      "js": ["js/dashboard.js"],
+      "matches": [ 
+        "https://*/_/chrome/newtab*", 
+        "*://local-ntp/local-ntp.html" 
+      ]
+    },
+    {
+      "js": ["js/favicons.js"],
+      "matches": [
+        "https://agm-test.agmsoft.org/*",
+        "https://agm-test2.agmsoft.org/*",
+        "https://agm-test3.agmsoft.org/*",
+        "https://jira.agmsoft.org/*",
+        "https://confluence.agmsoft.org/*"
+      ]
+    },
+    {
+      "js": ["js/jira.js"],
+      "css": ["css/jira.css"],
+      "matches": ["https://jira.agmsoft.org/*"],
+      "run_at": "document_end"
+    },
+    {
+      "js": ["js/confluence.js"],
+      "css": ["css/confluence.css"],
+      "matches": ["https://confluence.agmsoft.org/*"]
+    },
+    {
+      "css": ["css/agm-prod.css"],
+      "matches": ["https://sclub.agmsoft.org/*"]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "https://sclub.agmsoft.org/*",
+    "http://127.0.0.1:8888/*",
+    "https://agm-test.agmsoft.org/*",
+    "https://agm-test2.agmsoft.org/*",
+    "https://agm-test3.agmsoft.org/*",
+    "https://jira.agmsoft.org/*",
+    "https://confluence.agmsoft.org/*",
+    "storage", "activeTab", "contextMenus", "http://*/*", "https://*/*" 
+  ],
+  "manifest_version": 2,
+  "author": "Mike Goncharov"
+  // Сделать автоапдейт по гайду — https://developer.chrome.com/extensions/autoupdate
+}

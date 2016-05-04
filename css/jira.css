@@ -1,0 +1,19 @@
+html body {
+font-family: -apple-system, '.SFNSDisplay-Regular', Arial, sans-serif;
+}
+body #footer .footer-body, body #footer .footer-body a {
+	color: #bbb;
+}
+body #footer .footer-body {
+	min-height: 0;
+}
+body #footer .footer-body>ul, #footer-logo{
+	display: none;
+}
+a[title$="week99"] {
+    border-color: transparent !important;
+    color: #CCC;
+}
+/*оптимизация дашборда*/
+
+/*оптимизация дашборда*/

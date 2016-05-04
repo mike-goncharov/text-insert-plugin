@@ -1,0 +1,17 @@
+/*html body,body .expandingArea textarea, body .expandingArea pre {
+	ont-family: -apple-system, '.SFNSDisplay-Regular', Arial, sans-serif;
+}*/
+
+/*@import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100&subset=latin,cyrillic);
+html body,body .expandingArea textarea, body .expandingArea pre {
+	font-family: 'Roboto', sans-serif;
+}*/
+
+body.score-employee-page .score-employee-head .mr-total-label {
+    opacity: 0;
+    transition: all 0.3s ease-in 0s;
+}
+body.score-employee-page .score-employee-head:hover .mr-total-label{
+    opacity: .3;
+    transition-delay: 0.5s;
+}
